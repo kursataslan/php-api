@@ -1,0 +1,163 @@
+{
+	"info": {
+		"_postman_id": "7c8dbc4b-2761-477b-9b5c-6e88569b3859",
+		"name": "Local Requests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost/api/category/read.php",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/api/category/read.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"category",
+						"read.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost/api/product/search.php?s=phone",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/api/product/search.php?s=phone",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"product",
+						"search.php"
+					],
+					"query": [
+						{
+							"key": "s",
+							"value": "phone"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost/api/product/delete.php",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":\"13\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost/api/product/delete.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"product",
+						"delete.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost/api/product/read_one.php?id=12",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/api/product/read_one.php?id=81",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"product",
+						"read_one.php"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "81"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost/api/product/read.php",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/api/product/read.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"product",
+						"read.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost/api/product/create.php",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"Iphone\",\r\n    \"price\" : \"899\",\r\n    \"description\" : \"The best phone\",\r\n    \"category_id\" : 2,\r\n    \"discount\":\"no\",\r\n    \"sales_status\":\"yes\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost/api/product/create.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"product",
+						"create.php"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
